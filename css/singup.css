@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p{
+    margin: 0;
+}
+body{
+    background-color: #f0f2f5;
+    height: 100vh;
+}
+input{
+    outline: none;
+    border: none;
+    border: 1px solid #ccc;
+}
+input::placeholder{
+    font-size: .8rem;
+    font-weight: bold;
+}
+.main{
+    box-shadow: 0 0 10px 5px #919191;
+    width: 45%;
+}
+@media screen and (max-width:768px) {
+    .main{
+        width: 100%;
+        margin: 2rem;
+    }
+    body{
+        height: auto;
+        display: block;
+    }
+}

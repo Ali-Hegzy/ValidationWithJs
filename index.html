@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <title>website-Login</title>
+</head>
+<body>
+    <div class="main d-flex">
+        <div class="container h-100 d-flex justify-content-center align-items-center">
+            <div class="row w-100 justify-content-around">
+                <div class="col-lg-5 left text-center text-lg-start mb-4 mb-lg-0 pt-5">
+                    <h1 class="text-primary fw-bold mb-4">Website</h1>
+                    <div class="desc fs-4 text-black-50">Connect with friends and the world around you on this website</div>
+                </div>
+                <div class="col-lg-5 right d-flex flex-column">
+                    <form class="d-flex w-100 flex-column pb-3 bg-white rounded-1 gap-3">
+                        <input 
+                            type="text" 
+                            placeholder="Email address or phone number" 
+                            class="py-2 px-3 rounded-1 border text-primary fw-bold" 
+                            id="mail"
+                            onblur="isMailEmpty()"
+                            onkeyup="isMailValid()"
+                            onkeydown="isMailValid()"
+                        />
+                        <div class="mailStat"></div>
+                        <input 
+                            type="password" 
+                            placeholder="Password" 
+                            class="py-2 px-3 rounded-1 border text-primary fw-bold" 
+                            id="password"
+                            onfocus="passValid()"
+                            onkeyup="passValid()"
+                            onkeydown="passValid()"
+                            onblur="clearPassWarning()"
+                        />
+                        <div class="show">
+                            <input 
+                                type="checkbox" 
+                                class="showBut"
+                                onclick="showPass()"
+                                id="showBut"
+                            />
+                            <label for="showBut" class="text-primary fw-bold">Show password</label>
+                        </div>
+                        <div class="passStat"></div>
+                        <a class="btn btn-primary">Log in</a>
+                        <a href="#" class="text-decoration-none text-center mt-3">Forget Password?</a>
+                        <hr class="m-0">
+                        <div class="newAcc d-flex justify-content-center">
+                            <a href="signup.html" class="btn btn-success">Create New Account</a>
+                        </div>
+                    </form>
+                    <div class="text-center mt-2"> <a href="#" class="text-decoration-none">Create a Page</a> for a celebrity, brand or business.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

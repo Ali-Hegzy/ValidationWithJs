@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/singup.css" />
+    <title>website-SignUp</title>
+</head>
+<body class="d-flex justify-content-center align-items-center">
+    <div class="main bg-white">
+        <nav class="text-center fs-3 py-2 text-light bg-primary fw-bold">Create Account</nav>
+        <form class="p-4">
+            <div class="line">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="text-primary fw-bold" id="First Name:">First Name:</p>
+                        <input 
+                            type="text" 
+                            class="w-100 px-2 py-1 mb-4 rounded-1 check" 
+                            placeholder="Enter your first name"
+                            onkeyup="nameValid(this)" 
+                            onkeydown="nameValid(this)" 
+                        />
+                    </div>
+                    <div class="col md-6">
+                        <p class="text-primary fw-bold" id="Last Name:">Last Name:</p>
+                        <input 
+                            type="text" 
+                            class="w-100 px-2 py-1 mb-4 rounded-1 check" 
+                            placeholder="Enter your last name"
+                            onkeyup="nameValid(this)" 
+                            onkeydown="nameValid(this)" 
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="line">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="text-primary fw-bold" id="Email:">Email:</p>
+                        <input 
+                            type="email" 
+                            class="w-100 px-2 py-1 mb-4 rounded-1 check" 
+                            placeholder="Enter your email address"
+                            onkeyup="mailValid(this)"
+                            onkeydown="mailValid(this)"
+                        />
+                    </div>
+                    <div class="col md-6">
+                        <p class="text-primary fw-bold" id="Phone Number:">Phone Number:</p>
+                        <input type="text" class="w-100 px-2 py-1 mb-4 rounded-1 check" placeholder="Enter your phone number"/>
+                    </div>
+                </div>
+            </div>
+            <div class="line">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="text-primary fw-bold" id="Password:">Password:</p>
+                        <input 
+                            type="password" 
+                            class="w-100 px-2 py-1 mb-4 rounded-1 check" 
+                            id="pass"
+                            placeholder="Enter your password"
+                            onkeyup="passValid(this)"
+                            onkeydown="passValid(this)"
+                        />
+                    </div>
+                    <div class="col md-6">
+                        <p class="text-primary fw-bold" id="Confirm Password:">Confirm Password:</p>
+                        <input 
+                            type="password" 
+                            class="w-100 px-2 py-1 mb-4 rounded-1 check" 
+                            placeholder="Confirm your password"
+                            onkeyup="confirmPass(this)"
+                            onkeydown="confirmPass(this)"
+                            onfocus="confirmPass(this)"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="line">
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <p class="text-primary fw-bold mb-2" id="gender">Gender :</p>
+                        <div class="male mb-2">
+                            <input type="radio" name="gender" id="male" class="gender"/>
+                            <label for="male" class="text-black-50 fw-bold">Male</label>
+                        </div>
+                        <div class="female">
+                            <input type="radio" name="gender" id="female" class="gender"/>
+                            <label for="female" class="text-black-50 fw-bold">Female</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <p class="text-primary fw-bold mb-2" id="Birthdate :">Birthdate :</p>
+                        <input type="date" class="w-100 text-primary fw-bold px-2 py-1 rounded-1 check">
+                    </div>
+                </div>
+            </div>
+            <a 
+                href="#"
+                class="btn btn-primary w-auto"
+                onclick="reset()"
+            >
+                Reset
+            </a>
+            <input 
+                type="submit"
+                class="btn btn-primary w-auto"
+                onclick="return allOkay()"
+            />
+        </form>
+    </div>
+    <script src="js/singup.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<!-- 
+
+
+<div class="col-md-6">
+    <p class="text-primary fw-bold">First Name:</p>
+    <input type="text" class="w-100 px-2 rounded-1" placeholder="Enter your first name"/>
+    <p class="text-primary fw-bold">Email:</p>
+    <input type="email" class="w-100 px-2 rounded-1" placeholder="Enter your email address"/>
+    <p class="text-primary fw-bold">Password:</p>
+    <input type="password" class="w-100 px-2 rounded-1" placeholder="Enter your password"/>
+    <p class="text-primary fw-bold">Gender</p>
+    <div class="male">
+        <input type="radio" name="gender" id="male"/>
+        <label for="male" class="text-black-50 fw-bold">Male</label>
+    </div>
+    <div class="female">
+        <input type="radio" name="gender" id="female"/>
+        <label for="female" class="text-black-50 fw-bold">Female</label>
+    </div>
+</div>
+<div class="col-md-6">
+    <p class="text-primary fw-bold">Last Name:</p>
+    <input type="text" class="w-100 px-2 rounded-1" placeholder="Enter your last name"/>
+    <p class="text-primary fw-bold">Phone Number:</p>
+    <input type="text" class="w-100 px-2 rounded-1" placeholder="Enter your phone number"/>
+    <p class="text-primary fw-bold">Confirm Password:</p>
+    <input type="password" class="w-100 px-2 rounded-1" placeholder="Confirm your password"/>
+    <p class="text-primary fw-bold">Birthdate</p>
+    <input type="date" class="w-100 text-primary fw-bold px-2 py-1 rounded-1">
+</div>
+
+
+-->
